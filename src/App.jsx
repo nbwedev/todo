@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PlusIcon } from "@heroicons/react/16/solid";
 
 function App() {
   const [input, setInput] = useState("");
@@ -16,6 +17,8 @@ function App() {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Add todo here..."
       />
+
+      <PlusIcon className="size-6 text-blue=500" />
     </div>
   );
 }
