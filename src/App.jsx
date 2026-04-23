@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PlusIcon } from "@heroicons/react/16/solid";
+import { TrashIcon } from "@heroicons/react/16/solid";
 
 function App() {
   const [input, setInput] = useState("");
@@ -19,6 +20,13 @@ function App() {
       />
 
       <PlusIcon className="size-6 text-blue=500" />
+
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          <p>{todo.text}</p>
+          <TrashIcon className="size-6" />
+        </div>
+      ))}
     </div>
   );
 }
